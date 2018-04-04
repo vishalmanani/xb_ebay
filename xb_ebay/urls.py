@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from ebay.views import Index
+from ebay.views import Index,CallBackUrl
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^callback/$', CallBackUrl.as_view(), name="callbackurl"),
     url(r'^$', Index.as_view(), name="index"),
-
 ]
