@@ -22,6 +22,12 @@ class AcceptURL(View):
 
     def get(self, request):
         print("accept url")
-        print(request)
+        code = request.GET.get('code')
+        is_auth_successful = request.GET.get('isAuthSuccessful')
+        expires_in = request.GET.get('expires_in')
+
+        print("auth=====>", is_auth_successful)
+        print("expires======>", expires_in)
+        print("code=====>", code)
         return render(request, self.template, locals())
 
