@@ -60,5 +60,15 @@ class AcceptURL(View):
         print("refresh_token_expires_in====>", refresh_token_expires_in)
         print("token_type====>", token_type)
 
+        re_payload = {
+            'grant_type': 'refresh_token',
+            'refresh_token': refresh_token,
+            'scope': 'https://api.ebay.com/oauth/api_scope/sell.account%20https://api.ebay.com/oauth/api_scope/sell.inventory'
+        }
+
+        refresh_eb = requests.post(url, data=re_payload, headers=headers)
+        print("refresh_eb_status===>", refresh_eb.status_code)
+        print("refresh_eb_text=====>", refresh_eb.text)
+
         return render(request, self.template, locals())
 
