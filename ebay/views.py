@@ -85,7 +85,7 @@ class AcceptURL(View):
         inventory_url = 'https://api.ebay.com/sell/inventory/v1/location/?offset=0&limit=10'
 
         inventory_header = {
-            'Authorization': 'Bearer %s' % access_token
+            'Authorization': 'Bearer %s' % r_access_token
         }
 
         print(inventory_header)
