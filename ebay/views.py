@@ -46,13 +46,13 @@ class AcceptURL(View):
         print("eb_status===>", eb.status_code)
         print("eb_text=====>", eb.text)
 
-        access_token = json.loads(eb.text)
+        access_token_json = json.loads(eb.text)
 
-        access_token = access_token.get('access_token')
-        expires_in = access_token.get('expires_in')
-        refresh_token = access_token.get('refresh_token')
-        refresh_token_expires_in = access_token.get('refresh_token_expires_in')
-        token_type = access_token.get('token_type')
+        access_token = access_token_json.get('access_token')
+        expires_in = access_token_json.get('expires_in')
+        refresh_token = access_token_json.get('refresh_token')
+        refresh_token_expires_in = access_token_json.get('refresh_token_expires_in')
+        token_type = access_token_json.get('token_type')
 
         print("access_token====>", access_token)
         print("expires_in======>", expires_in)
