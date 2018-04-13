@@ -80,5 +80,17 @@ class AcceptURL(View):
         print("r_expires_in====>", r_expires_in)
         print("r_token_type====>", r_token_type)
 
+        inventory_url = 'https://api.ebay.com/sell/inventory/v1/location/?offset=0&limit=10'
+
+        inventory_header = {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer %s' % access_token
+        }
+
+        inventory = requests.get(url, headers=inventory_header)
+
+        print("inventory_status===>", inventory.status_code)
+        print("inventory_text=====>", inventory.text)
+
         return render(request, self.template, locals())
 
