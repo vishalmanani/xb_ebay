@@ -43,12 +43,22 @@ class AcceptURL(View):
 
         }
         eb = requests.post(url, data=payload, headers=headers)
-
         print("eb_status===>", eb.status_code)
         print("eb_text=====>", eb.text)
 
-        access_token = eb.text.get('access_token')
-        print(access_token)
+        access_token = json.loads(eb.text)
+
+        access_token = access_token.get('access_token')
+        expires_in = access_token.get('expires_in')
+        refresh_token = access_token.get('refresh_token')
+        refresh_token_expires_in = access_token.get('refresh_token_expires_in')
+        token_type = access_token.get('token_type')
+
+        print("access_token====>", access_token)
+        print("expires_in======>", expires_in)
+        print("refresh_token=====>", refresh_token)
+        print("refresh_token_expires_in====>", refresh_token_expires_in)
+        print("token_type====>", token_type)
 
         return render(request, self.template, locals())
 
