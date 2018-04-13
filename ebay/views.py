@@ -47,5 +47,8 @@ class AcceptURL(View):
         print("eb_status===>", eb.status_code)
         print("eb_text=====>", eb.text)
 
+        access_token = eb.text.get('access_token')
+        print(access_token)
+
         return render(request, self.template, locals())
 
