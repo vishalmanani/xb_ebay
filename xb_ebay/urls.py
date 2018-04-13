@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from ebay.views import Index, AcceptURL
+from ebay.views import Index, AcceptURL, GetNotification
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accept_url/$', AcceptURL.as_view(), name="accept_url"),
+    url(r'^notification/$', GetNotification.as_view(), name="notification"),
     url(r'^$', Index.as_view(), name="index"),
 ]

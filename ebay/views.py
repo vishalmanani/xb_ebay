@@ -1,10 +1,13 @@
 import json
-
+from xml.etree import ElementTree as ET
 from django.shortcuts import render
+from django.utils.decorators import method_decorator
 from django.views import View
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 import requests
 import base64
+
+from django.views.decorators.csrf import csrf_exempt
 
 
 class Index(View):
@@ -96,3 +99,26 @@ class AcceptURL(View):
 
         return render(request, self.template, locals())
 
+
+class GetNotification(View):
+    template = 'notification.html'
+
+    @method_decorator(csrf_exempt)
+    def dispatch(self, request, *args, **kwargs):
+        return super(GetNotification, self).dispatch(request, *args, **kwargs)
+
+    def get(self, request):
+        print("====GET=====")
+        print(request)
+        print(request.body)
+        response = request
+        return render(request, self.template, locals())
+
+    def post(self, request):
+        print("====POST=====")
+        print(request)
+        print(request.body)
+        data = request.body
+        # value = ET.fromstring(data).find('AddDisputeRequest')
+        print(data)
+        return HttpResponse(data)
