@@ -33,7 +33,7 @@ class AcceptURL(View):
 
         headers = {
             'Content-Type': 'application/x-www-form-urlencoded',
-            'Authorization': 'Basic %s' % base64.b64encode(bytes('vishalma-xbtest-SBX-b786e1828-de038b36:SBX-786e1828d8cd-f0aa-4632-a7b2-b6c6', 'utf-64')),
+            'Authorization': 'Basic dmlzaGFsbWEteGJ0ZXN0LVNCWC1iNzg2ZTE4MjgtZGUwMzhiMzY6U0JYLTc4NmUxODI4ZDhjZC1mMGFhLTQ2MzItYTdiMi1iNmM2'
         }
 
         payload = {
