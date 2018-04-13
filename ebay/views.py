@@ -70,5 +70,15 @@ class AcceptURL(View):
         print("refresh_eb_status===>", refresh_eb.status_code)
         print("refresh_eb_text=====>", refresh_eb.text)
 
+        r_access_token_json = json.loads(refresh_eb.text)
+
+        r_access_token = r_access_token_json.get('access_token')
+        r_expires_in = r_access_token_json.get('expires_in')
+        r_token_type = r_access_token_json.get('token_type')
+
+        print("r_access_token===>", r_access_token)
+        print("r_expires_in====>", r_expires_in)
+        print("r_token_type====>", r_token_type)
+
         return render(request, self.template, locals())
 
