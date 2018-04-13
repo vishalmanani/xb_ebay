@@ -24,11 +24,8 @@ class AcceptURL(View):
         print("accept url")
 
         code = request.GET.get('code')
-        is_auth_successful = request.GET.get('isAuthSuccessful')
         expires_in = request.GET.get('expires_in')
-        client_id = request.GET.get('client_id')
 
-        print("auth=====>", is_auth_successful)
         print("expires======>", expires_in)
         print("code=====>", code)
 
@@ -36,7 +33,7 @@ class AcceptURL(View):
 
         headers = {
             'Content-Type': 'application/x-www-form-urlencoded',
-            'Authorization': 'Basic %s' % base64.b64encode(bytes('vishalma-xbtest-SBX-b786e1828-de038b36:SBX-786e1828d8cd-f0aa-4632-a7b2-b6c6', 'utf-8')),
+            'Authorization': 'Basic %s' % base64.b64encode(bytes('vishalma-xbtest-SBX-b786e1828-de038b36:SBX-786e1828d8cd-f0aa-4632-a7b2-b6c6', 'utf-64')),
         }
 
         payload = {
