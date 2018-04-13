@@ -31,25 +31,24 @@ class AcceptURL(View):
         print("auth=====>", is_auth_successful)
         print("expires======>", expires_in)
         print("code=====>", code)
-        print("client_id===>", client_id)
 
-        # url = 'https://api.sandbox.ebay.com/identity/v1/oauth2/token'
-        #
-        # headers = {
-        #     'Content-Type': 'application/x-www-form-urlencoded',
-        #     'Authorization': 'Basic %s' % base64.b64encode(bytes('vishalma-xbtest-SBX-b786e1828-de038b36:SBX-786e1828d8cd-f0aa-4632-a7b2-b6c6', 'utf-8')),
-        # }
-        #
-        # payload = dict(
-        #     grant_type='authorization_code',
-        #     code=code,
-        #     redirect_uri='vishal_manani-vishalma-xbtest-kvjqakom'
-        #
-        # )
-        # eb = requests.post(url, data=payload, headers=headers)
-        #
-        # print("eb_status===>", eb.status_code)
-        # print("eb_text=====>", eb.text)
+        url = 'https://api.sandbox.ebay.com/identity/v1/oauth2/token'
+
+        headers = {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization': 'Basic %s' % base64.b64encode(bytes('vishalma-xbtest-SBX-b786e1828-de038b36:SBX-786e1828d8cd-f0aa-4632-a7b2-b6c6', 'utf-8')),
+        }
+
+        payload = {
+            'grant_type': 'authorization_code',
+            'code': code,
+            'redirect_uri': 'vishal_manani-vishalma-xbtest-kvjqakom'
+
+        }
+        eb = requests.post(url, data=payload, headers=headers)
+
+        print("eb_status===>", eb.status_code)
+        print("eb_text=====>", eb.text)
 
         return render(request, self.template, locals())
 
