@@ -80,7 +80,7 @@ class AcceptURL(View):
         print("r_expires_in====>", r_expires_in)
         print("r_token_type====>", r_token_type)
 
-        inventory_url = 'https://api.ebay.com/sell/inventory/v1/location/?offset=0&limit=10'
+        inventory_url = 'https://api.sandbox.ebay.com/sell/inventory/v1/location?limit=1&offset=0'
 
         inventory_header = {
             'Content-Type': 'application/json',
