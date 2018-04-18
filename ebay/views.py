@@ -121,17 +121,36 @@ class AcceptURL(View):
 
         # production
         # r_access_token = "v^1.1#i^1#p^3#f^0#r^0#I^3#t^H4sIAAAAAAAAAOVXbWwURRju9Qva8mUEBALJsUggkL2bvd29vVt7F68thJoWzl4BqdYytzvbruztnjtzbc9oUhotJoJRAzH1IzR+gGgQCBFiSAjGoCEaixpQiWkQhRikJuoPEkR09vrBtUpLW340sX+anXk/nvd5n3duBrQVFq3oWNNxdbprSm5XG2jLdbm4ElBUWLByRl7ugoIckGXg6mq7ty2/Pe/nUgwTRlKuQThpmRi5WxOGieXMYohJ2aZsQaxj2YQJhGWiyLFIdZXs8wA5aVvEUiyDcVdWhBhRUwKi5FMEwAuCpiC6ag7ErLXofjwARcUv8ZLiR5Km0n2MU6jSxASaJMT4ABdggcByQi2QZJ8oc7xHCEh1jHsDsrFumdTEA5hwBq6c8bWzsI4MFWKMbEKDMOHKyOrYukhlxaq1taXerFjhfh5iBJIUHvpVbqnIvQEaKTRyGpyxlmMpRUEYM95wX4ahQeXIAJhxwM9Q7Vd9SEAaFDjKp0+R7giVqy07AcnIOJwVXWW1jKmMTKKT9GiMUjbijyGF9H+tpSEqK9zOvwdT0NA1HdkhZlVZZNP62Koaxh2LRm2rWVeR6lTKSX5JCPqloJ8JN+s4Ac0GIdCfpC9SP8XDspRbpqo7hGH3WouUIYoYDeeFy+KFGq0z19kRjThosu2Cg/wJdU5D+zqYIk2m01OUoCS4M5+jsz8gh5sCuFOC0IIaElVJjEs80vx84D8F4cz6GEURdvoSiUa9DhYUh2k2Ae0tiCQNqCBWofSmEsjWVZkXNR8f0BCr+oMaKwQ1jY2Lqp/lNIQAQvG4Egz8X7RBiK3HUwQN6mP4RqbAEBNTrCSKWoaupJnhJpmzpl8NrTjENBGSlL3elpYWTwvvsexGrw8AzvtQdVVMaUIJyAza6qMbs3pGF84RTe1lkk5SNK1UdjS52ciEeVuNQpukY8gw6MKAaIdgCw9fvUWR2ClycpXn+GMaACZ1j6Npj2IlvBakM+wsNWQQu2/HyIspQZ6+iaCRPTaCqmUa6fE4j8FHN5upqCw7PUJCZ9ZHDzCGpFBRrJRJxlNjv+sYPLSUoemG4czOeBJmuY8FpgmNNNEVPJhyQsKPJJOV6uQSPj0km6BB7VrjBGHCRmsq2LgU8CMu4KNnGpLUIK18QlVXN+qTrGjOJ3ICH+ABD4B/QrVVoObJ1lEgCqqU354bVRWBVUV/kBXiEmShqgosUOivsAR42mBpQnWXGzqdpNr0ZDvH11iYoInJtZxeoiZXUc5MDoxkXBAQ6weac6ESAiwUgxLLQQnebsneW95H/nUN9Q59A4ZzMn9cu+sD0O46RJ+RwAuWckvA4sK89fl50xZgnSCPDjUP1htN+rSxkWcLSiehbucWuh5eeHBfQ9ars6sezBt8dxblcSVZj1Cw8OZOATfznulcAAicACQ6tnwdWHJzN5+bmz87V9za0HP68jevnus+3f3c4XC6a9sOMH3QyOUqyMlvd+XI7ZFHz+9webw1G+PHWi+eeW/OVweuvX/1rR+erVzUE5z2yPeLS+dvfLP3emJFxzvber7ePevF8/OrrnTtvFI29cLvnXsObPuyaPPn3UfOLd+1/8Pq4l3Pnzql4k115rJjvXb9a8Kfyt3F5Z13Vc1bdPGzo29f2+T9+7i75IGT962xH7dDl17YPHu965M39voOzvy2t3jK3sudPyYjS3t//fiM+PpPM47HL5QyX5S9/Ol2PrWEPH20+MLcV3qqru/bv3PPb+JLO9J6w/GpzSsPHV6+r377u6H6LV1K+Oylhr+eefKjX+bc+OPkiUio42xL6dEDnd/1Hjm7ddZTT8SW1e7ZLZ7aVeE+Mf9gd8mc+695am/0te8fJlHcow8QAAA="
-        inventory_url = 'https://api.ebay.com/sell/inventory/v1/inventory_item?limit=2&offset=0'
+        # inventory_url = 'https://api.ebay.com/sell/inventory/v1/inventory_item?limit=2&offset=0'
 
-        inventory_header = {
+        # inventory_header = {
+        #     'Authorization': 'Bearer %s' % r_access_token
+        # }
+
+        # print(inventory_header)
+        # inventory = requests.get(inventory_url, headers=inventory_header)
+        #
+        # print("inventory_status===>", inventory.status_code)
+        # print("inventory_text=====>", inventory.text)
+
+        bulk_migrate_listing_url = 'https://api.ebay.com/sell/inventory/v1/bulk_migrate_listing'
+
+        bulk_migrate_listing_header = {
             'Authorization': 'Bearer %s' % r_access_token
         }
 
-        print(inventory_header)
-        inventory = requests.get(inventory_url, headers=inventory_header)
+        bulk_migrate_listing_payload = {
+            "requests": [
+                {
+                    "listingId": "222929471807"
+                }
+            ]
+        }
 
-        print("inventory_status===>", inventory.status_code)
-        print("inventory_text=====>", inventory.text)
+        bulk_migrate_listing = requests.post(bulk_migrate_listing_url, headers=bulk_migrate_listing_header, data=bulk_migrate_listing_payload)
+
+        print("bulk_migrate_listing_status===>", bulk_migrate_listing.status_code)
+        print("bulk_migrate_listing_text=====>", bulk_migrate_listing.text)
 
         return render(request, self.template, locals())
 
