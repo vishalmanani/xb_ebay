@@ -147,7 +147,7 @@ class AcceptURL(View):
             ]
         }
 
-        bulk_migrate_listing = requests.post(bulk_migrate_listing_url, headers=bulk_migrate_listing_header, data=bulk_migrate_listing_payload)
+        bulk_migrate_listing = requests.post(bulk_migrate_listing_url, headers=bulk_migrate_listing_header, data=json.loads(bulk_migrate_listing_payload))
 
         print("bulk_migrate_listing_status===>", bulk_migrate_listing.status_code)
         print("bulk_migrate_listing_text=====>", bulk_migrate_listing.text)
