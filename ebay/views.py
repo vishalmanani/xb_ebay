@@ -120,7 +120,7 @@ class AcceptURL(View):
         # inventory_url = 'https://api.sandbox.ebay.com/sell/inventory/v1/inventory_item?limit=2&offset=0'
 
         # production
-        # r_access_token = "v^1.1#i^1#p^3#f^0#r^0#I^3#t^H4sIAAAAAAAAAOVXbWwURRju9Qva8mUEBALJsUggkL2bvd29vVt7F68thJoWzl4BqdYytzvbruztnjtzbc9oUhotJoJRAzH1IzR+gGgQCBFiSAjGoCEaixpQiWkQhRikJuoPEkR09vrBtUpLW340sX+anXk/nvd5n3duBrQVFq3oWNNxdbprSm5XG2jLdbm4ElBUWLByRl7ugoIckGXg6mq7ty2/Pe/nUgwTRlKuQThpmRi5WxOGieXMYohJ2aZsQaxj2YQJhGWiyLFIdZXs8wA5aVvEUiyDcVdWhBhRUwKi5FMEwAuCpiC6ag7ErLXofjwARcUv8ZLiR5Km0n2MU6jSxASaJMT4ABdggcByQi2QZJ8oc7xHCEh1jHsDsrFumdTEA5hwBq6c8bWzsI4MFWKMbEKDMOHKyOrYukhlxaq1taXerFjhfh5iBJIUHvpVbqnIvQEaKTRyGpyxlmMpRUEYM95wX4ahQeXIAJhxwM9Q7Vd9SEAaFDjKp0+R7giVqy07AcnIOJwVXWW1jKmMTKKT9GiMUjbijyGF9H+tpSEqK9zOvwdT0NA1HdkhZlVZZNP62Koaxh2LRm2rWVeR6lTKSX5JCPqloJ8JN+s4Ac0GIdCfpC9SP8XDspRbpqo7hGH3WouUIYoYDeeFy+KFGq0z19kRjThosu2Cg/wJdU5D+zqYIk2m01OUoCS4M5+jsz8gh5sCuFOC0IIaElVJjEs80vx84D8F4cz6GEURdvoSiUa9DhYUh2k2Ae0tiCQNqCBWofSmEsjWVZkXNR8f0BCr+oMaKwQ1jY2Lqp/lNIQAQvG4Egz8X7RBiK3HUwQN6mP4RqbAEBNTrCSKWoaupJnhJpmzpl8NrTjENBGSlL3elpYWTwvvsexGrw8AzvtQdVVMaUIJyAza6qMbs3pGF84RTe1lkk5SNK1UdjS52ciEeVuNQpukY8gw6MKAaIdgCw9fvUWR2ClycpXn+GMaACZ1j6Npj2IlvBakM+wsNWQQu2/HyIspQZ6+iaCRPTaCqmUa6fE4j8FHN5upqCw7PUJCZ9ZHDzCGpFBRrJRJxlNjv+sYPLSUoemG4czOeBJmuY8FpgmNNNEVPJhyQsKPJJOV6uQSPj0km6BB7VrjBGHCRmsq2LgU8CMu4KNnGpLUIK18QlVXN+qTrGjOJ3ICH+ABD4B/QrVVoObJ1lEgCqqU354bVRWBVUV/kBXiEmShqgosUOivsAR42mBpQnWXGzqdpNr0ZDvH11iYoInJtZxeoiZXUc5MDoxkXBAQ6weac6ESAiwUgxLLQQnebsneW95H/nUN9Q59A4ZzMn9cu+sD0O46RJ+RwAuWckvA4sK89fl50xZgnSCPDjUP1htN+rSxkWcLSiehbucWuh5eeHBfQ9ars6sezBt8dxblcSVZj1Cw8OZOATfznulcAAicACQ6tnwdWHJzN5+bmz87V9za0HP68jevnus+3f3c4XC6a9sOMH3QyOUqyMlvd+XI7ZFHz+9webw1G+PHWi+eeW/OVweuvX/1rR+erVzUE5z2yPeLS+dvfLP3emJFxzvber7ePevF8/OrrnTtvFI29cLvnXsObPuyaPPn3UfOLd+1/8Pq4l3Pnzql4k115rJjvXb9a8Kfyt3F5Z13Vc1bdPGzo29f2+T9+7i75IGT962xH7dDl17YPHu965M39voOzvy2t3jK3sudPyYjS3t//fiM+PpPM47HL5QyX5S9/Ol2PrWEPH20+MLcV3qqru/bv3PPb+JLO9J6w/GpzSsPHV6+r377u6H6LV1K+Oylhr+eefKjX+bc+OPkiUio42xL6dEDnd/1Hjm7ddZTT8SW1e7ZLZ7aVeE+Mf9gd8mc+695am/0te8fJlHcow8QAAA="
+        r_access_token = "v^1.1#i^1#p^3#f^0#r^0#I^3#t^H4sIAAAAAAAAAOVXa2wURRzv9aXIQ6kIQgCPrYpA9m72bm93b+1dPNoiNZQeXEGk4TG7O9tbu7d77uy1dwpynrGCMSYaEwnGWAUVRHwAfhCNAeIjKhIJgQRFhYQEIxrhAyohorPXB9cqLW350MRLNpeZ+T9//99/HiBbPmp2+/z2P8a6rivuyIJsscvFjAajysvmjCspnlJWBAoEXB3Z27OluZKfqjBM6ElxMcJJ08DInU7oBhbzkyEqZRmiCbGGRQMmEBZtWYxF6heIPg8Qk5Zpm7KpU+66mhDFCozAKDKr+HheYpQAmTW6bTaaIYrjWJaTOAn4A7ICZZmsY5xCdQa2oWGHKB9gBBqwNCM0gqDI+MSAzxNkwHLKvRRZWDMNIuIBVDgfrpjXtQpi7T9UiDGybGKECtdF5sUaInU1tQsbq7wFtsJdOMRsaKdw71G1qSD3UqinUP9ucF5ajKVkGWFMecOdHnobFSPdwQwh/DzUKMCziGd8KqdAQQbwmkA5z7QS0O4/DmdGU2g1Lyoiw9bszECIEjSkB5Fsd40WEhN1NW7nb1EK6pqqIStE1c6NPLAkVruYcseiUcts1RSkOJkyPMezQY4PclS4VcMJaKxihS4nnZa6IO7jpdo0FM0BDLsXmvZcRCJGfXEBBbgQoQajwYqothNNgRzDdOMH+OVOQTsrmLLjhlNTlCAguPPDgdHvpsNlAlwrQgh+JcCDIMsysqQEOOU/CeH0+iBJEXbqEolGvU4sSIIZOgGtFmQndSgjWibwphLI0hTRH1B9fkFFtMIFVZoNqiotBRSOZlSEAEKSJAeF/ws3bNvSpJSNevjRdyGfYIiKyWYSRU1dkzNUX5H8XtPFhjQOUXHbTopeb1tbm6fN7zGtZq8PAMa7rH5BTI6jBNkBumW1gYVpLc8LGREtrIl2JkmiSRPaEedGMxX2W0oUWnYmhnSdTHSTtlds4b6zV0gSO0mOrPQcfUwMwKTmcTjtkc2E14Skh52pVfmI3Vcj5MUEIE9nRxDLHgtBxTT0zFCUB6GjGa2EVKaV6ceh0+sDGxiEU3JgmynDHkqOXaqD0FBTuqrputM7Q3FYoD6YMA2oZ2xNxj0uh0X8SDJZp4ws4pNNMg51IpeWbIRtOrq4hpZ4gUOM4CN7GuKVIMl8WFnXN2sjLGnGx/l4EBBYHgBuWLnVoNaRVlEQYBW+NFccJfdumhz8QZqVeEhDRWFpIJNTmAd+UmB+WHlX6xrppMbMSNvH55vYRsOjazW5RI2spJye7G5JiWURzQHVuVCxAg0DQZ5mIA+vNmXvFe8j/7qGenu/AcNF+R+Tc70Pcq73yDMSeMEdTCWYUV6ypLRkzBSs2cijQdWDtWaDPG0s5GlBmSTUrOJyV9PUd7etKnh1dqwAt/a8O0eVMKMLHqFg6uWVMubGSWMZAbDkCzK+gG85qLy8WspMLJ0wbXTVvgXjMn9FxFw6Gz03KxQNtoKxPUIuV1lRac5VtHv9MmUHdWb14YMz5894fp9VU3HXz1Nfnqg033D2681b75v5baY1XtKePGWfvvlM1bpPlmVXrj38w6vsyScPrTywwXXy4oHzv5/4Ebw4/rPaD5Obmi6t2ZyteHrv7reOTJc/2MSlm5ibXrn30/r0s3eax164/+G1vHU+N7vylzNj1m30u88+d/H6r2459PmK2XuWTH+qJTGn5VHvnIMb1nrXf3Nw72sn5LZtjzy25vvSS2+fn/DM34vmNm75bv/pc4/HX4r+9kSZtGXantdPlVUKoY/Ss8YfXX3bke0VKy/cs7X+i+Pq9p3h/X+yH0+O7Xzz7kh7x8zQO2/s2hg/uvVYw4VFlZOaKnb45h2v/PLXyWeXPrRL7SzfP9VM+CcPEAAA"
         # inventory_url = 'https://api.ebay.com/sell/inventory/v1/inventory_item?limit=2&offset=0'
 
         # inventory_header = {
@@ -147,7 +147,9 @@ class AcceptURL(View):
             ]
         }
 
-        bulk_migrate_listing = requests.post(bulk_migrate_listing_url, headers=bulk_migrate_listing_header, data=json.loads(bulk_migrate_listing_payload))
+        print(json.dumps(bulk_migrate_listing_payload))
+
+        bulk_migrate_listing = requests.post(bulk_migrate_listing_url, headers=bulk_migrate_listing_header, data=bulk_migrate_listing_payload)
 
         print("bulk_migrate_listing_status===>", bulk_migrate_listing.status_code)
         print("bulk_migrate_listing_text=====>", bulk_migrate_listing.text)
@@ -176,4 +178,8 @@ class GetNotification(View):
         data = request.body
         # value = ET.fromstring(data).find('AddDisputeRequest')
         print(data)
-        return HttpResponse(data)
+        response = {
+            'status': 200,
+            'type': 'OK'
+        }
+        return JsonResponse(response, safe=False)
