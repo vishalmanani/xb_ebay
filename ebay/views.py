@@ -174,10 +174,12 @@ class GetNotification(View):
     def post(self, request):
         print("====POST=====")
         print(request)
-        print(request.body)
+        # print(request.body)
         data = request.body
         # value = ET.fromstring(data).find('AddDisputeRequest')
+        print("====Start data====")
         print(data)
+        print("====end data====")
         response = {
             'status': 200,
             'type': 'OK'
