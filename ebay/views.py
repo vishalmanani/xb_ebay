@@ -5,6 +5,7 @@ from django.utils.decorators import method_decorator
 from django.views import View
 from django.http import JsonResponse, HttpResponse
 import requests
+from ebaysdk import response as res
 import base64
 
 from django.views.decorators.csrf import csrf_exempt
@@ -174,9 +175,12 @@ class GetNotification(View):
     def post(self, request):
         print("====POST=====")
         print(request)
-        # print(request.body)
-        data = request.body
-        # value = ET.fromstring(data).find('AddDisputeRequest')
+
+        xml = request.body
+        rdo = res.ResponseDataObject({'content': xml})
+        r = res.Response(rdo)
+        data = r.json()
+
         print("====Start data====")
         print(data)
         print("====end data====")

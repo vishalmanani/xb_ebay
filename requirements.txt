@@ -6,3 +6,4 @@ gunicorn
 whitenoise
 requests
 psycopg2-binary
+ebaysdk==2.1.5
